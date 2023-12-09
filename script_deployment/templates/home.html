@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Flower Class Prediction</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Sora:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container contact-form">
+    <form action="{{ url_for('predict')}}" method="post">
+      <h3>Test Prediksi Rangking siswa</h3>
+      <div class="row">
+        <div class="kolom
+                    <!-- tes -->
+                    <label for=" Medu" class="form-label">Pendidikan Ibu</label>
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Medu" id="Medu1" value="1">
+              <label class="form-check-label" for="Medu1">SD</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Medu" id="Medu2" value="2">
+              <label class="form-check-label" for="Medu2">SMP</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Medu" id="Medu3" value="3">
+              <label class="form-check-label" for="Medu3">SMA</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Medu" id="Medu4" value="4">
+              <label class="form-check-label" for="Medu4">dll</label>
+            </div>
+          </div>
+          <label for="Fedu" class="form-label">Pendidikan Ayah</label>
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Fedu" id="Fedu1" value="1">
+              <label class="form-check-label" for="Fedu1">SD</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Fedu" id="Fedu2" value="2">
+              <label class="form-check-label" for="Fedu2">SMP</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Fedu" id="Fedu3" value="3">
+              <label class="form-check-label" for="Fedu3">SMA</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Fedu" id="Fedu4" value="4">
+              <label class="form-check-label" for="Fedu4">dll</label>
+            </div>
+          </div>
+          <!-- form -->
+          <div class="form-group">
+            <input type="number" name="studytime" class="form-control" placeholder="Waktu belajar"
+              required="required" />
+          </div>
+          <div class="form-group">
+            <input type="number" name="failures" class="form-control" placeholder="Jumalah gagal" required="required" />
+          </div>
+          <div class="form-group">
+            <input type="number" name="absences" class="form-control" placeholder="Jumlah Absen" required="required" />
+          </div>
+          <div class="form-group">
+            <input type="number" name="G1" class="form-control" placeholder="Raking Semester 2 lalu"
+              required="required" />
+          </div>
+          <div class="form-group">
+            <input type="number" name="G2" class="form-control" placeholder="Raking Semester lalu"
+              required="required" />
+          </div>
+          <label for="higher_yes" class="form-label">Ingin lanjut Kuliah</label>
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="higher_yes" id="higher_yes1" value="1">
+              <label class="form-check-label" for="higher_yes1">ya</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="higher_yes" id="higher_yes2" value="2">
+              <label class="form-check-label" for="higher_yes2">tidak</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-danger btn-block btn-small">
+              Predict
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card">
+        <form action="{{ url_for('predict')}}" method="get">
+            <h2>Hasil Prediksi</h2>
+            <h4>Rangking: <span>
+                {{ prediction_text }}
+            </span></h4>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

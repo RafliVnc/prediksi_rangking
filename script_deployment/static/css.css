@@ -1,0 +1,39 @@
+body {
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    margin: 0px;
+    font-family: 'Righteous', sans-serif;
+    font-family: 'Sora', sans-serif;
+}
+
+.card {
+    background: white;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 2rem;
+    box-shadow: 15px 10px 30px 1px rgba(0,0,0,0.2)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+span {
+    padding: 5px;
+    background: #6574CF;
+    border-radius: 8px;
+    margin-left: 10px;
+    color: white
+}
